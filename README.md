@@ -7,16 +7,19 @@ I am just assuming some data based on the above condition.
 
 Let :
 
-        T = length of the observation sequence
-        N = number of states in the model
-        M = number of observation symbols
-        Q = {q0; q1; : : : ; qN−1} = distinct states of the Markov process
-        V = {0; 1; : : : ; M − 1} = set of possible observations
-        A = state transition probabilities
-        B = observation probability matrix
-        π = initial state distribution
-        O = (O0; O1; : : : ; OT −1) = observation sequence
+    Q = q1 q2 . . . qN a set of N states
+        
+    A = a11 . . . aij . . . aNN a transition probability matrix A, each aij representing the probability
+                     Pij of moving from state i to state j, s.t.  N j=1 aij = 1 ∀i
+                                        
+    O = o1,o2,oT a sequence of T observations, each one drawn from a vocabulary V =v1 , v2 ,..., vV
+        
+    B = bi(ot) a sequence of observation likelihoods, also called emission probabili-ties, each expressing 
+                     the probability of an observation o t being generated from a state i
+                                        
+    π = π1 , π2 , ..., πN an initial probability distribution over states. πi is the probability that the 
+                      Markov chain will start in state i. Some states Pj may have πj = 0, 
+                      meaning that they cannot be initial states. Also, ni=1 π i = 1
         
         
-
-
+        
