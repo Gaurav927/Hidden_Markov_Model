@@ -3,7 +3,7 @@ HMM from scratch
 
 The example for implementing HMM is inspired from GeoLife Trajectory Dataset. The data consist of 180 users and their GPS data of during the stay of 4 years. After Data Cleaning and running some algorithms we got users and their place of interest with some probablity distribution i.e. transition probablity, observation probablity and instial state probablity distribution
 
-I am just assuming some data based on the above condition.
+The data is based on above condition
 
 Let :
 
