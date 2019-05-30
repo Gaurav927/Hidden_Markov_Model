@@ -36,8 +36,11 @@ We solve 3 types of problem in HMM
     Problem 3:
         Given an observation sequence O and the dimensions N and M , find the model λ = (A, B, π)
         that maximizes the probability of O.
+        
 #### Problem 1
-Note that a given observation can be come from any of the hidden states that is we have N possiblity similiary <br />
+Note that, a given observation can be come from any of the hidden states that is we have N possiblity, similiary <br />
 a observation of length T can have total N <sup> T </sup> possible option each taking O(T) for computaion, therefore <br />
-time complexity for the problem is O(TN<sup>T</sup>)
+total time complexity for the problem is O(TN<sup>T</sup>).
+
+
 
