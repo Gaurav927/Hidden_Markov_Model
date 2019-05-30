@@ -15,7 +15,7 @@ Let :
     O = o1,o2,oT a sequence of T observations, each one drawn from a vocabulary V =v1 , v2 ,..., vV
         
     B = bi(ot) a sequence of observation likelihoods, also called emission probabili-ties, each expressing 
-                     the probability of an observation o t being generated from a state i
+                     the probability of an observation ot being generated from a state i
                                         
     π = π1 , π2 , ..., πN an initial probability distribution over states. πi is the probability that the 
                       Markov chain will start in state i. Some states Pj may have πj = 0, 
