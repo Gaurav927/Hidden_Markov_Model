@@ -23,3 +23,16 @@ Let :
         
         
         
+We solve 3 types of problem in HMM
+
+    Problem 1:
+        Given the model λ = (A, B, π) and a sequence of observations O, find P (O | λ). Here, we
+        want to determine a score for the observed sequence O with respect to the given model λ.
+        
+    Problem 2:
+        Given λ = (A, B, π) and an observation sequence O, find an optimal state sequence for the
+        underlying Markov process.
+        
+    Problem 3:
+        Given an observation sequence O and the dimensions N and M , find the model λ = (A, B, π)
+        that maximizes the probability of O.
