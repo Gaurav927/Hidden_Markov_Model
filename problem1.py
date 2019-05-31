@@ -8,6 +8,8 @@ def Solve_problem1(A,B,intial,observation):
 	intial = probablity of hidden state as being the first 
 
 	Observation : Sequence of obsevation
+	
+	Note each hidden state and observed state is encoded by 0,1,2,3...N-1
 
 	"""
 	# forward[t][j] = P(o1,o2. . .ot,qt = j|λ)
