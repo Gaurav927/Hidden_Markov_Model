@@ -41,6 +41,10 @@ We solve 3 types of problem in HMM
 Note that, a given observation can be come from any of the hidden states that is we have N possiblity, similiary <br />
 a observation of length T can have total N <sup> T </sup> possible option each taking O(T) for computaion, therefore <br />
 total time complexity for the problem is O(TN<sup>T</sup>).
+Instead of using such an extremely exponential algorithm, we use an efficient
+O(N<sup>2</sup> T ) algorithm called the forward algorithm. The forward algorithm is a kind
+of dynamic programming algorithm, that is, an algorithm that uses a table to store
+intermediate values as it builds up the probability of the observation sequence
 
 
 
