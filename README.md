@@ -47,7 +47,7 @@ of dynamic programming algorithm, that is, an algorithm that uses a table to sto
 intermediate values as it builds up the probability of the observation sequence
 
 #### Problem 2
-We need to find most probable hidden states that rise to given hidden state
+We need to find most probable hidden states that rise to given observation
 
 
 #### Problem 3
