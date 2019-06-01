@@ -46,5 +46,33 @@ O(N<sup>2</sup> T ) algorithm called the forward algorithm. The forward algorith
 of dynamic programming algorithm, that is, an algorithm that uses a table to store
 intermediate values as it builds up the probability of the observation sequence
 
+#### Problem 2
+We need to find most probable hidden states that rise to given hidden state
 
 
+#### Problem 3
+
+Let us begin by considering the much simpler case of training a fully visible
+Markov model, we know both the time and placed visited for a
+parrticular user. That is, imagine we see the following set of input observations and magically
+knew the aligned hidden state sequences:
+```
+3 am     3 am     2 am           1 am      1 am       2 am                       1 am      2  am     3 am 
+Noida    Noida    Delhi          Delhi      Delhi     Delhi                      Delhi     Delhi     Delhi
+```
+From above observation we can easily calculate that ( Using Maximum Likelihood Estimates) <br />
+π<sub>Delhi</sub> = 2/3 <br />
+π<sub>Noida</sub> = 1/3
+
+Next we can directly compute the A matrix from the transitions, ignoring the final hidden states:
+```
+p(Noida|Noida) = 2/3            p(Delhi|Noida) = 1/3
+p(Delhi|Delhi) = 1/2            p(Noida|Delhi) = 1/2
+```
+Corresponding B matrix
+```
+P(1 am|Noida) = 0/4 = 0              p(1 am|Delhi) = 3/5 = .6
+P(2 am|Noida) = 1/4 = .25            p(2 am|Delhi) = 2/5 = .4
+P(3 am|Noida) = 3/4 = .75            p(3 am|Delhi) = 0
+```
+ 
