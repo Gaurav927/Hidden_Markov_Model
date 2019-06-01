@@ -75,4 +75,8 @@ P(1 am|Noida) = 0/4 = 0              p(1 am|Delhi) = 3/5 = .6
 P(2 am|Noida) = 1/4 = .25            p(2 am|Delhi) = 2/5 = .4
 P(3 am|Noida) = 3/4 = .75            p(3 am|Delhi) = 0
 ```
- 
+ But the real problem is even harder: we don’t know the counts of being in any
+of the hidden states!! The Baum-Welch algorithm solves this by iteratively esti-
+mating the counts.We will start with an estimate for the transition and observation
+probabilities and then use these estimated probabilities to derive better and better
+probabilities
