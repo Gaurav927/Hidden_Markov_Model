@@ -57,8 +57,8 @@ Markov model, we know both the time and placed visited for a
 parrticular user. That is, imagine we see the following set of input observations and magically
 knew the aligned hidden state sequences:
 ```
-3 am     3 am     2 am           1 am      1 am       2 am                       1 am      2  am     3 am 
-Noida    Noida    Delhi          Delhi      Delhi     Delhi                      Delhi     Delhi     Delhi
+3 am     3 am     2 am           1 am      1 am       2 am               1 am      2  am     3 am 
+Noida    Noida    Delhi          Delhi      Delhi     Delhi              Delhi     Delhi     Delhi
 ```
 From above observation we can easily calculate that ( Using Maximum Likelihood Estimates) <br />
 π<sub>Delhi</sub> = 2/3 <br />
