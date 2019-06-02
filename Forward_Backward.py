@@ -57,17 +57,18 @@ class problem3:
 		gamma = np.zeros(shape=(self.T,self.N))
 
 		estimate =np.zeros(shape=(self.T,self.N,self.N))
-        
-        for t in range(self.T-1):
-        	for i in range(self.N):
-        		for j in range(self.N):
-        			estimate[t,i,j] = (forward[i][t]*backward[j][self.observation[t+1]]*self.transition[i][j]*self.emission[j][self.observation[t+1]])/prob
+		
+		for t in range(self.T-1):
+			for i in range(self.N):
+				for j in range(self.N):
+					estimate[t,i,j] = (forward[i][t]*backward[j][self.observation[t+1]]*self.transition[i][j]*self.emission[j][self.observation[t+1]])/prob
 
-        for t in range(self.T-1):
-        	for i in range(self.N):
-        		gamma[t][i] = (forward[i][t]*backward[i][t])/prob
-        for i in range(self.N):
-        	gamma[self.T-1][i] = forward[self.T-1][i]
+		for t in range(self.T-1):
+			for i in range(self.N):
+				gamma[t][i] = (forward[i][t]*backward[i][t])/prob
+
+		for i in range(self.N):
+			gamma[self.T-1][i] = forward[self.T-1][i]
 
 		return gamma , estimate
 
