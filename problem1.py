@@ -1,3 +1,4 @@
+import numpy as np
 def Solve_problem1(A,B,intial,observation):
 	"""
 	A: transition probablity matrix (N X N)
@@ -8,31 +9,28 @@ def Solve_problem1(A,B,intial,observation):
 	intial = probablity of hidden state as being the first 
 
 	Observation : Sequence of obsevation
-	
-	Note each hidden state and observed state is encoded by 0,1,2,3...N-1
 
 	"""
 	# forward[t][j] = P(o1,o2. . .ot,qt = j|λ)
 	# forward[t][j] = sum(forward[t-1][i]*aij*bj(ot))
 
-	forward = [[0 for i in range(len(A))] for j in range(len(obsevation))]
+	forward = np.zeros(shape=(len(A),len(observation)))
 	N = len(A)
-	T = len(obsevation)
+	T = len(observation)
 
 	for i in range(N):
-		forward[i][0] = intial[i]*B[i][obsevation[0]]
+		forward[i,0] = intial[i]*B[i][observation[0]]
 
-	prob =0
+	prob =0.0
 
 	for t in range(1,T):
 		for j in range(N):
-			sol =0
+			sol =0.0
 			for i in range(N):
-				sol +=forward[t-1][i]*A[i][j]*B[j][obsevation[t]]
-			forward[t][j] =sol
+				sol +=forward[i,t-1]*A[i][j]*B[j][observation[t]]
+			forward[j,t] =sol
 
 	for i in range(N):
-		prob+=forward[T-1][i]
+		prob+=forward[i][T-1]
 
 	return prob
-
