@@ -80,3 +80,7 @@ of the hidden states!! The Baum-Welch algorithm solves this by iteratively esti-
 mating the counts.We will start with an estimate for the transition and observation
 probabilities and then use these estimated probabilities to derive better and better
 probabilities
+
+## Sample usage
+
+
